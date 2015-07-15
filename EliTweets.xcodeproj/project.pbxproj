@@ -14,7 +14,7 @@
 		45CE0FE31B35C1DD00117931 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45CE0FE11B35C1DD00117931 /* LaunchScreen.xib */; };
 		45CE0FEF1B35C1DD00117931 /* EliTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0FEE1B35C1DD00117931 /* EliTweetsTests.swift */; };
 		45E269531B486C8500D1F11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45E269551B486C8500D1F11A /* Localizable.strings */; };
-		45E857431B49995A00363DE5 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E857421B49995A00363DE5 /* WebViewTests.swift */; };
+		D6CFB1DA1B55894B0005E138 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFB1D91B55894B0005E138 /* ParsedTweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		45E269501B48680700D1F11A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		45E269541B486C8500D1F11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45E269561B486C9900D1F11A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		45E857421B49995A00363DE5 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
+		D6CFB1D91B55894B0005E138 /* ParsedTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +86,7 @@
 			children = (
 				45CE0FD81B35C1DD00117931 /* AppDelegate.swift */,
 				45CE0FDA1B35C1DD00117931 /* ViewController.swift */,
+				D6CFB1D91B55894B0005E138 /* ParsedTweet.swift */,
 				45CE0FDC1B35C1DD00117931 /* Main.storyboard */,
 				45CE0FDF1B35C1DD00117931 /* Images.xcassets */,
 				45CE0FE11B35C1DD00117931 /* LaunchScreen.xib */,
@@ -107,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				45CE0FEE1B35C1DD00117931 /* EliTweetsTests.swift */,
-				45E857421B49995A00363DE5 /* WebViewTests.swift */,
 				45CE0FEC1B35C1DD00117931 /* Supporting Files */,
 			);
 			path = EliTweetsTests;
@@ -223,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CFB1DA1B55894B0005E138 /* ParsedTweet.swift in Sources */,
 				45CE0FDB1B35C1DD00117931 /* ViewController.swift in Sources */,
 				45CE0FD91B35C1DD00117931 /* AppDelegate.swift in Sources */,
 			);
@@ -233,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45CE0FEF1B35C1DD00117931 /* EliTweetsTests.swift in Sources */,
-				45E857431B49995A00363DE5 /* WebViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,14 +4,54 @@
 //
 //  Created by Eli Alford-Jones on 6/20/15.
 //  Copyright (c) 2015 Eli Alford-Jones. All rights reserved.
-//  test change?
+// 
 
 import UIKit
 import Social
 
-public class ViewController: UIViewController {
+let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_1_200x200.png")
 
-    @IBOutlet public weak var twitterWebView: UIWebView!
+public class ViewController: UITableViewController {
+    
+    var parsedTweets : Array <ParsedTweet> = [
+        ParsedTweet(
+            tweetText: "IOS 8 SDK now in print",
+            userName: "@elialfordj",
+            createdAt: "2015-07-14 15:08:00 PDT",
+            userAvatarURl: defaultAvatarURl),
+    
+        ParsedTweet(
+            tweetText: "math is cool",
+            userName: "@elialfordj",
+            createdAt: "2015-07-14 15:08:12 PDT",
+            userAvatarURl: defaultAvatarURL),
+     
+        ParsedTweet(
+            tweetText: "art is cool",
+            userName: "@elialfordj",
+            createdAt: "2015-07-14 15:08:40 PDT",
+            userAvatarURl: defaultAvatarURL)
+        
+    ]
+    
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override public func tableView(_tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+    
+    override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ParsedTweet.count
+    }
+    
+    override public func tableView(_tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        let parsedTweet = ParsedTweets[indexPath.row]
+        cell.textLabel!.text = "Row \(indexPath.row)"
+        return cell
+    }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +63,9 @@ public class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func handleShowMyTweetsTapped(sender: UIButton) {
-        reloadTweets()
-    }
     
     func reloadTweets(){
-        let url = NSURL (string:"http://www.twitter.com/elialfordj")
-        let urlRequest = NSURLRequest (URL: url!)
-        twitterWebView.loadRequest(urlRequest)
+
     }
     
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
@@ -46,4 +80,6 @@ public class ViewController: UIViewController {
     }
 
 }
+
+
 
