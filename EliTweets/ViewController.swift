@@ -18,24 +18,24 @@ public class ViewController: UITableViewController {
             tweetText: "IOS 8 SDK now in print",
             userName: "@elialfordj",
             createdAt: "2015-07-14 15:08:00 PDT",
-            userAvatarURl: defaultAvatarURl),
+            userAvatarURL: defaultAvatarURL ),
     
         ParsedTweet(
             tweetText: "math is cool",
             userName: "@elialfordj",
             createdAt: "2015-07-14 15:08:12 PDT",
-            userAvatarURl: defaultAvatarURL),
+            userAvatarURL: defaultAvatarURL ),
      
         ParsedTweet(
             tweetText: "art is cool",
             userName: "@elialfordj",
             createdAt: "2015-07-14 15:08:40 PDT",
-            userAvatarURl: defaultAvatarURL)
+            userAvatarURL: defaultAvatarURL )
         
     ]
     
     override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 5
     }
     
     override public func tableView(_tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -43,12 +43,11 @@ public class ViewController: UITableViewController {
     }
     
     override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ParsedTweet.count
+        return section + 1
     }
     
     override public func tableView(_tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-        let parsedTweet = ParsedTweets[indexPath.row]
         cell.textLabel!.text = "Row \(indexPath.row)"
         return cell
     }

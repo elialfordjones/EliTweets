@@ -14,7 +14,7 @@ class ParsedTweet: NSObject {
     var createdAt : String?
     var userAvatarURL : NSURL?
     
-    init (tweetText: String?, userName: String?, createdAt: String?, userAvatarURl: NSURL?){
+    init (tweetText: String?, userName: String?, createdAt: String?, userAvatarURL: NSURL?){
         super.init()
         self.tweetText = tweetText;
         self.userName  = userName;
